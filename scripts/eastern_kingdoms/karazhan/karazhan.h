@@ -53,6 +53,11 @@ enum
     NPC_IMAGE_OF_MEDIVH             = 17651,
     NPC_IMAGE_OF_ARCANAGOS          = 17652,
 
+    // Netherspite portals
+    NPC_PORTAL_GREEN                = 17367,
+    NPC_PORTAL_BLUE                 = 17368,
+    NPC_PORTAL_RED                  = 17369,
+
     GO_STAGE_CURTAIN                = 183932,
     GO_STAGE_DOOR_LEFT              = 184278,
     GO_STAGE_DOOR_RIGHT             = 184279,

@@ -90,6 +90,9 @@ void instance_karazhan::OnCreatureCreate(Creature* pCreature)
         case NPC_LORD_ROBIN_DARIS:
         case NPC_IMAGE_OF_MEDIVH:
         case NPC_IMAGE_OF_ARCANAGOS:
+        case NPC_PORTAL_GREEN:
+        case NPC_PORTAL_BLUE:
+        case NPC_PORTAL_RED:
             m_mNpcEntryGuidStore[pCreature->GetEntry()] = pCreature->GetObjectGuid();
             break;
         case NPC_NIGHTBANE_HELPER:
