@@ -128,7 +128,7 @@ static const uint32 auiPortalVector[MAX_PORTAL_PROPERTIES][MAX_PORTALS] =
 };
 
 //adjust how easy it is to catch the beam
-static const float beamHitbox = 0.5f;
+static const float beamHitbox = 0.8f;
 
 struct MANGOS_DLL_DECL boss_netherspiteAI : public ScriptedAI
 {
@@ -207,6 +207,7 @@ struct MANGOS_DLL_DECL boss_netherspiteAI : public ScriptedAI
         {
             if (DoCastSpellIfCan(m_creature, SPELL_NETHERSPITE_ROAR) == CAST_OK)
             {
+                DoDebuffPortalHolderInBanishPhase();
                 DoResetPortals();
 
                 DoCastSpellIfCan(m_creature, SPELL_SHADOWFORM, CAST_TRIGGERED);
@@ -274,6 +275,20 @@ struct MANGOS_DLL_DECL boss_netherspiteAI : public ScriptedAI
         }
     }
 
+    void DoDebuffPortalHolder(uint8 portalIndex)
+    {
+        if (m_portalHolder[portalIndex] && m_portalHolder[portalIndex] != m_creature)
+            m_portalHolder[portalIndex]->CastSpell(m_portalHolder[portalIndex], auiPortalVector[DEBUFF][portalIndex], true);
+    }
+
+    void DoDebuffPortalHolderInBanishPhase()
+    {
+        for (uint8 i = 0; i < MAX_PORTALS; ++i)
+        {
+            DoDebuffPortalHolder(i);
+        }
+    }
+
     void JustSummoned(Creature* pSummoned) override
     {
         //do this at db later
@@ -317,8 +332,7 @@ struct MANGOS_DLL_DECL boss_netherspiteAI : public ScriptedAI
 
                     if (!m_portalHolder[i] || pPlayer != m_portalHolder[i])
                     {
-                        if (m_portalHolder[i] && m_portalHolder[i] != m_creature)
-                            m_portalHolder[i]->CastSpell(m_portalHolder[i], auiPortalVector[DEBUFF][i], true);
+                        DoDebuffPortalHolder(i);
 
                         m_portal[i]->CastSpell(pPlayer, auiPortalVector[VISUAL_PLR][i], true);
                         m_portalHolder[i] = pPlayer;
@@ -330,8 +344,7 @@ struct MANGOS_DLL_DECL boss_netherspiteAI : public ScriptedAI
 
                     if (!m_portalHolder[i] || m_creature != m_portalHolder[i])
                     {
-                        if (m_portalHolder[i])
-                            m_portalHolder[i]->CastSpell(m_portalHolder[i], auiPortalVector[DEBUFF][i], true);
+                        DoDebuffPortalHolder(i);
 
                         m_portal[i]->CastSpell(m_creature, auiPortalVector[VISUAL_NS][i], true); 
                         m_portalHolder[i] = m_creature;
@@ -343,9 +356,17 @@ struct MANGOS_DLL_DECL boss_netherspiteAI : public ScriptedAI
 
     bool IsPlayerPositionBetweenPortalAndNetherspite(uint8 portalIndex, Player* pPlayer)
     {
-        float delta = m_portal[portalIndex]->GetDistance2d(pPlayer) + pPlayer->GetDistance2d(m_creature) - m_portal[portalIndex]->GetDistance2d(m_creature);
+        bool success = false;
 
-        return  delta >= -beamHitbox && delta <= beamHitbox;
+        if (m_portal[portalIndex] && pPlayer)
+        {
+            float delta = m_portal[portalIndex]->GetDistance2d(pPlayer) + pPlayer->GetDistance2d(m_creature) - m_portal[portalIndex]->GetDistance2d(m_creature);
+
+            if  (delta >= -beamHitbox && delta <= 0)
+                success = true;
+        }
+
+        return success;
     }
 
     Player* GetClosestPlayerToPortalBetweenPortalAndNetherspite(uint8 portalIndex)
