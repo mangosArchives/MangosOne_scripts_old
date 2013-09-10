@@ -17,7 +17,7 @@
 /* ScriptData
 SDName: GO_Scripts
 SD%Complete: 100
-SDComment: Quest support: 5097, 5098, Barov_journal->Teaches spell 26089
+SDComment: Quest support: 5097, 5098, 9678, Barov_journal->Teaches spell 26089
 SDCategory: Game Objects
 EndScriptData */
 
@@ -25,6 +25,7 @@ EndScriptData */
 go_barov_journal
 go_ethereum_prison
 go_ethereum_stasis
+go_gilded_brazier
 go_andorhal_tower
 EndContentData */
 
@@ -132,6 +133,40 @@ bool GOUse_go_ethereum_stasis(Player* pPlayer, GameObject* pGo)
 }
 
 /*######
+## go_gilded_brazier
+######*/
+
+enum
+{
+	QUEST_THE_FIRST_TRIAL	= 9678,
+	NPC_SANGRIAS_STILLBLADE = 17716,
+	SAY_AGGRO				= -1177161
+};
+
+const int32 iStillbladeCoords[4] =
+{
+	8073.04f, -7544.01f, 152.678925f, 0.039728f
+};
+
+bool GOUse_go_gilded_brazier(Player* pPlayer, GameObject* pGo)
+{
+	if (pGo->GetGoType() == GAMEOBJECT_TYPE_GOOBER)
+	{
+		if (pPlayer->GetQuestStatus(QUEST_THE_FIRST_TRIAL) == QUEST_STATUS_INCOMPLETE)
+		{
+			if (Creature* pStillblade = pPlayer->SummonCreature(NPC_SANGRIAS_STILLBLADE,
+					iStillbladeCoords[0], iStillbladeCoords[1], iStillbladeCoords[2], iStillbladeCoords[3],
+					TEMPSUMMON_TIMED_OOC_OR_DEAD_DESPAWN, 25000))
+			{
+				DoScriptText(SAY_AGGRO, pStillblade);
+				pStillblade->AI()->AttackStart(pPlayer);
+			}
+		}
+	}
+	return true;
+};
+
+/*######
 ## go_jump_a_tron
 ######*/
 
@@ -203,6 +238,11 @@ void AddSC_go_scripts()
     pNewScript->Name = "go_ethereum_stasis";
     pNewScript->pGOUse =          &GOUse_go_ethereum_stasis;
     pNewScript->RegisterSelf();
+
+	pNewScript = new Script;
+	pNewScript->Name = "go_gilded_brazier";
+	pNewScript->pGOUse =		  &GOUse_go_gilded_brazier;
+	pNewScript->RegisterSelf();
 
     pNewScript = new Script;
     pNewScript->Name = "go_jump_a_tron";
