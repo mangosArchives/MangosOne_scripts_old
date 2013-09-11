@@ -143,7 +143,7 @@ enum
 	SAY_AGGRO				= -1177161
 };
 
-const int32 iStillbladeCoords[4] =
+const float iStillbladeCoords[4] =
 {
 	8073.04f, -7544.01f, 152.678925f, 0.039728f
 };
