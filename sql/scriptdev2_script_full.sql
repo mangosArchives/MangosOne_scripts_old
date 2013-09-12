@@ -1066,7 +1066,7 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 
 -- -1 177 161 SANGRIAS STILLBALDE
 INSERT INTO `script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
-(-1177161, 'Defend yourself, youngling! We\'ll see if there\'s a Blood Knight in you yet.', 0, 2, 0, 0, 'Sangrias Stillblade SAY_AGGRO');
+(-1177161, 'Defend yourself, youngling! We\'ll see if there\'s a Blood Knight in you yet.', 0, 1, 0, 0, 'Sangrias Stillblade SAY_AGGRO');
 
 -- -1 189 000 SCARLET MONASTERY
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,comment) VALUES
