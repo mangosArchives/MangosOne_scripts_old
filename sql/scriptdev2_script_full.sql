@@ -908,7 +908,35 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 
 (-1000907,'%s sniffs at the air. A tuber is near!',0,2,0,0,'domesticated felboar EMOTE_SNIFF_AIR'),
 (-1000908,'%s starts to dig.',0,2,0,0,'domesticated felboar EMOTE_START_DIG'),
-(-1000909,'%s squeals with glee at its discovery.',0,2,0,0,'domesticated felboar EMOTE_SQUEAL');
+(-1000909,'%s squeals with glee at its discovery.',0,2,0,0,'domesticated felboar EMOTE_SQUEAL'),
+
+(-1000910,'Shall we begin, my friend?',0,0,0,0,'anchorite truuen SAY_BEGIN'),
+(-1000911,'This area is known to be full of foul Scourge. You may want to take a moment to prepare any defenses at your disposal.',0,0,0,0,'anchorite truuen SAY_FIRST_STOP'),
+(-1000912,'Very well, let us continue.',0,0,0,0,'anchorite truuen SAY_CONTINUE'),
+(-1000913,'Beware! We are attacked!',0,0,0,0,'anchorite truuen SAY_FIRST_ATTACK'),
+(-1000914,'It must be the purity of the Mark of the Lightbringer that is drawing forth the Scourge to us. We must proceed with caution lest we overwhelmed!',0,0,0,0,'anchorite truuen SAY_PURITY'),
+(-1000915,'We are beset upon again! Defend yourself!',0,0,0,0,'anchorite truuen SAY_SECOND_ATTACK'),
+(-1000916,'The land truly needs to be cleansed by the Light! Let us continue on the tomb. It isn\'t far now.',0,0,0,0,'anchorite truuen SAY_CLEANSE'),
+(-1000917,'Be welcome, friends!',0,0,0,0,'high priest thel\'danis SAY_WELCOME'),
+(-1000918,'Thank you for coming in remembrance of me. Your efforts in recovering that symbol, while unnecessary, are certainly touching to an old man\'s heart.',0,0,0,0,'ghost of uther SAY_EPILOGUE_1'),
+(-1000919,'Please, rise my friend. Keep the Blessing as a symbol of the strength of the Light and how heroes long gone might once again rise in each of us to inspire.',0,0,0,0,'ghost of uther SAY_EPILOGUE_2'),
+
+(-1000948,'Well then, let\'s get this started. The longer we\'re here, the more damage the undead could be doing back in Hilsbrad.',0,0,0,0,'kinelory SAY_START'),
+(-1000949,'All right, this is where we really have to be on our paws. Be ready!',0,0,0,0,'kinelory SAY_REACH_BOTTOM'),
+(-1000950,'Attack me if you will, but you won\'t stop me from getting back to Quae.',0,0,0,0,'kinelory SAY_AGGRO_KINELORY'),
+(-1000951,'You have my word that I shall find a use for your body after I\'ve killed you, Kinelory.',0,0,0,0,'jorell SAY_AGGRO_JORELL'),
+(-1000952,'Watch my rear! I\'ll see what I can find in all this junk...',0,0,0,0,'kinelory SAY_WATCH_BACK'),
+(-1000953,'%s begins rummaging through the apothecary\'s belongings.',0,2,0,0,'kinelory EMOTE_BELONGINGS'),
+(-1000954,'I bet Quae\'ll think this is important. She\'s pretty knowledgeable about these things--no expert, but knowledgable.',0,0,0,0,'kinelory SAY_DATA_FOUND'),
+(-1000955,'Okay, let\'s get out of here quick quick! Try and keep up. I\'m going to make a break for it.',0,0,0,0,'kinelory SAY_ESCAPE'),
+(-1000956,'We made it! Quae, we made it!',0,0,0,0,'kinelory SAY_FINISH'),
+(-1000957,'%s hands her pack to Quae.',0,2,0,0,'kinelory EMOTE_HAND_PACK'),
+
+(-1000958,'You must protect me from monsters, who are living in this forest!',0,0,0,0,'stinky ignatz SAY_STINKY_BEGIN'),
+(-1000959,'This part of forest are very danger for us. We must be a careful!',0,0,0,0,'stinky ignatz SAY_STINKY_FIRST_STOP'),
+(-1000960,'Kill two monsters, who stay near Bogbean plant and then I gather a bogbean.',0,0,0,0,'stinky ignatz SAY_STINKY_2_MONSTERS'),
+(-1000961,'I am gathering a bogbean. It takes some time.',0,0,0,69,'stinky ignatz SAY_STINKY_GATHERING'),
+(-1000962,'Thanks you for help.',0,0,0,0,'stinky ignatz SAY_STINKY_END');
 
 -- -1 033 000 SHADOWFANG KEEP
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,comment) VALUES
@@ -931,7 +959,7 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 
 (-1033013,'Who dares interfere with the Sons of Arugal?',0,1,0,0,'boss_arugal YELL_FENRUS'),
 (-1033014,'%s vanishes.',0,2,0,0,'prisoner ashcrombe EMOTE_VANISH_AS'),
-(-1033015,'%s fumbles with the rusty lock on the courtyard door.',0,2,0,432,'prisoner adamant EMOTE_UNLOCK_DOOR_AD'),
+(-1033015,'%s fumbles with the rusty lock on the courtyard door.',0,2,0,0,'prisoner adamant EMOTE_UNLOCK_DOOR_AD'),
 (-1033016,'Arrrgh!',0,0,0,0,'deathstalker vincent SAY_VINCENT_DIE'),
 (-1033017,'You, too, shall serve!',5793,1,0,0,'boss_arugal YELL_AGGRO'),
 (-1033018,'Another Falls!',5795,1,0,0,'boss_arugal YELL_KILLED_PLAYER'),
@@ -1633,7 +1661,10 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 (-1532127,'Miserable vermin. I shall exterminate you from the air!',0,1,0,0,'nightbane SAY_AIR_PHASE'),
 (-1532128,'Enough! I shall land and crush you myself!',0,1,0,0,'nightbane SAY_LAND_PHASE_1'),
 (-1532129,'Insects! Let me show you my strength up close!',0,1,0,0,'nightbane SAY_LAND_PHASE_2'),
-(-1532130,'%s takes a deep breath.',0,3,0,0,'nightbane EMOTE_DEEP_BREATH');
+(-1532130,'%s takes a deep breath.',0,3,0,0,'nightbane EMOTE_DEEP_BREATH'),
+
+(-1532131,'The halls of Karazhan shake, as the curse binding the doors of the Gamemaster\'s Hall is lifted.',0,2,0,0,'echo_of_medivh EMOTE_LIFT_CURSE'),
+(-1532132,'%s cheats!',0,3,0,0,'echo_of_medivh EMOTE_CHEAT');
 
 -- -1 533 000 NAXXRAMAS
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,comment) VALUES
@@ -2753,7 +2784,7 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 (-1580030,'Gah! Well done... Now... this gets... interesting...',12471,1,0,0,'brutallus YELL_DEATH'),
 
 (-1580031,'Hold, friends! There is information to be had before this devil meets his fate!',12472,1,0,0,'madrigosa YELL_MADR_ICE_BARRIER'),
-(-1580032,'Where is Anveena, demon? What has become of Kalec?',12473,1,0,0,'madrigosa YELL_MADR_INTRO'),
+(-1580032,'Where is Anveena, demon? What has become of Kalec?',12473,1,0,293,'madrigosa YELL_MADR_INTRO'),
 (-1580033,'You will tell me where they are!',12474,1,0,0,'madrigosa YELL_MADR_ICE_BLOCK'),
 (-1580034,'Speak, I grow weary of asking!',12475,1,0,0,'madrigosa YELL_MADR_TRAP'),
 (-1580035,'Malygos, my lord! I did my best!',12476,1,0,0,'madrigosa YELL_MADR_DEATH'),
@@ -2974,7 +3005,21 @@ INSERT INTO gossip_texts (entry,content_default,comment) VALUES
 (-3532002,'Ok, I\'ll give it a try, then.','barnes GOSSIP_ITEM_OPERA_2'),
 (-3532003,'I\'ve never been more ready.','barnes GOSSIP_ITEM_OPERA_JULIANNE_WIPE'),
 (-3532004,'The wolf\'s going down.','barnes GOSSIP_ITEM_OPERA_WOLF_WIPE'),
-(-3532005,'What phat lewtz you have grandmother?','grandma GOSSIP_ITEM_GRANDMA');
+(-3532005,'What phat lewtz you have grandmother?','grandma GOSSIP_ITEM_GRANDMA'),
+
+(-3532006,'Control Orc Grunt','orc grunt GOSSIP_ITEM_ORC_GRUNT'),
+(-3532007,'Control Orc Wolf','orc wolf GOSSIP_ITEM_ORC_WOLF'),
+(-3532008,'Control Summoned Daemon','summoned deamon GOSSIP_ITEM_SUMMONED_DEAMON'),
+(-3532009,'Control Orc Warlock','orc warlock GOSSIP_ITEM_ORC_WARLOCK'),
+(-3532010,'Control Orc Necrolyte','orc necrolyte GOSSIP_ITEM_ORC_NECROLYTE'),
+(-3532011,'Control Warchief Blackhand','warchief blackhand GOSSIP_ITEM_WARCHIEF_BLACKHAND'),
+(-3532012,'Control Human Footman','human footman GOSSIP_ITEM_HUMAN_FOOTMAN'),
+(-3532013,'Control Human Charger','human charger GOSSIP_ITEM_HUMAN_CHARGER'),
+(-3532014,'Control Conjured Water Elemental','conjured water elemental GOSSIP_ITEM_WATER_ELEMENTAL'),
+(-3532015,'Control Human Conjurer','human conjurer GOSSIP_ITEM_HUMAN_CONJURER'),
+(-3532016,'Control Human Cleric','human cleric GOSSIP_ITEM_HUMAN_CLERIC'),
+(-3532017,'Control King Llane','king llane GOSSIP_ITEM_KING_LLANE'),
+(-3532018,'Please reset the chess board, we would like to play again.','medivh GOSSIP_ITEM_RESET_BOARD');
 
 -- -3 534 000 THE BATTLE OF MT. HYJAL
 INSERT INTO gossip_texts (entry,content_default,comment) VALUES
@@ -5495,5 +5540,116 @@ INSERT INTO script_waypoint VALUES
 (3584, 18, 4566.09, 303.127, 55.0396, 0, ''),
 (3584, 19, 4561.65, 295.456, 57.0984, 4000, 'SAY_THERYLUNE_FINISH'),
 (3584, 20, 4551.03, 293.333, 57.1534, 2000, '');
+
+DELETE FROM script_waypoint WHERE entry=17238;
+INSERT INTO script_waypoint VALUES
+(17238, 0, 954.21, -1433.72, 63.00, 0, ''),
+(17238, 1, 972.70, -1438.85, 65.56, 0, ''),
+(17238, 2, 984.79, -1444.15, 64.13, 0, ''),
+(17238, 3, 999.00, -1451.74, 61.20, 0, ''),
+(17238, 4, 1030.94, -1470.39, 63.49, 25000, 'SAY_FIRST_STOP'),
+(17238, 5, 1030.94, -1470.39, 63.49, 3000, 'SAY_CONTINUE'),
+(17238, 6, 1036.50, -1484.25, 64.60, 0, ''),
+(17238, 7, 1039.11, -1501.22, 65.32, 0, ''),
+(17238, 8, 1038.44, -1522.18, 64.55, 0, ''),
+(17238, 9, 1037.19, -1543.15, 62.33, 0, ''),
+(17238, 10, 1036.79, -1563.88, 61.93, 5000, 'SAY_FIRST_ATTACK'),
+(17238, 11, 1036.79, -1563.88, 61.93, 5000, 'SAY_PURITY'),
+(17238, 12, 1035.61, -1587.64, 61.66, 0, ''),
+(17238, 13, 1035.43, -1612.97, 61.54, 0, ''),
+(17238, 14, 1035.36, -1630.66, 61.53, 0, ''),
+(17238, 15, 1038.85, -1653.02, 60.35, 0, ''),
+(17238, 16, 1042.27, -1669.36, 60.75, 0, ''),
+(17238, 17, 1050.41, -1687.22, 60.52, 0, ''),
+(17238, 18, 1061.15, -1704.45, 60.59, 0, ''),
+(17238, 19, 1073.51, -1716.99, 60.65, 0, ''),
+(17238, 20, 1084.20, -1727.24, 60.95, 0, ''),
+(17238, 21, 1100.71, -1739.89, 60.64, 5000, 'SAY_SECOND_ATTACK'),
+(17238, 22, 1100.71, -1739.89, 60.64, 0, 'SAY_CLEANSE'),
+(17238, 23, 1117.03, -1749.01, 60.87, 0, ''),
+(17238, 24, 1123.58, -1762.29, 62.40, 0, ''),
+(17238, 25, 1123.36, -1769.29, 62.83, 0, ''),
+(17238, 26, 1115.78, -1779.59, 62.09, 0, ''),
+(17238, 27, 1109.56, -1789.78, 61.03, 0, ''),
+(17238, 28, 1094.81, -1797.62, 61.22, 0, ''),
+(17238, 29, 1079.30, -1801.58, 64.95, 0, ''),
+(17238, 30, 1060.24, -1803.40, 70.36, 0, ''),
+(17238, 31, 1047.69, -1804.49, 73.92, 0, ''),
+(17238, 32, 1032.59, -1805.99, 76.13, 0, ''),
+(17238, 33, 1013.60, -1812.36, 77.32, 0, ''),
+(17238, 34, 1007.01, -1814.38, 80.48, 0, ''),
+(17238, 35, 999.93, -1816.39, 80.48, 2000, 'SAY_WELCOME'),
+(17238, 36, 984.72, -1822.05, 80.48, 0, ''),
+(17238, 37, 977.77, -1824.80, 80.79, 0, ''),
+(17238, 38, 975.33, -1824.91, 81.24, 12000, 'event complete'),
+(17238, 39, 975.33, -1824.91, 81.24, 10000, 'SAY_EPILOGUE_1'),
+(17238, 40, 975.33, -1824.91, 81.24, 8000, 'SAY_EPILOGUE_2'),
+(17238, 41, 975.33, -1824.91, 81.24, 30000, '');
+
+DELETE FROM script_waypoint WHERE entry=2713;
+INSERT INTO script_waypoint VALUES
+(2713, 0, -1416.91, -3044.12, 36.21, 0, ''),
+(2713, 1, -1408.43, -3051.35, 37.79, 0, ''),
+(2713, 2, -1399.45, -3069.20, 31.25, 0, ''),
+(2713, 3, -1400.28, -3083.14, 27.06, 0, ''),
+(2713, 4, -1405.30, -3096.72, 26.36, 0, ''),
+(2713, 5, -1406.12, -3105.95, 24.82, 0, ''),
+(2713, 6, -1417.41, -3106.80, 16.61, 0, ''),
+(2713, 7, -1433.06, -3101.55, 12.56, 0, ''),
+(2713, 8, -1439.86, -3086.36, 12.29, 0, ''),
+(2713, 9, -1450.48, -3065.16, 12.58, 5000, 'SAY_REACH_BOTTOM'),
+(2713, 10, -1456.15, -3055.53, 12.54, 0, ''),
+(2713, 11, -1459.41, -3035.16, 12.11, 0, ''),
+(2713, 12, -1472.47, -3034.18, 12.44, 0, ''),
+(2713, 13, -1495.57, -3034.48, 12.55, 0, ''),
+(2713, 14, -1524.91, -3035.47, 13.15, 0, ''),
+(2713, 15, -1549.05, -3037.77, 12.98, 0, ''),
+(2713, 16, -1555.69, -3028.02, 13.64, 3000, 'SAY_WATCH_BACK'),
+(2713, 17, -1555.69, -3028.02, 13.64, 5000, 'SAY_DATA_FOUND'),
+(2713, 18, -1555.69, -3028.02, 13.64, 2000, 'SAY_ESCAPE'),
+(2713, 19, -1551.19, -3037.78, 12.96, 0, ''),
+(2713, 20, -1584.60, -3048.77, 13.67, 0, ''),
+(2713, 21, -1602.14, -3042.82, 15.12, 0, ''),
+(2713, 22, -1610.68, -3027.42, 17.22, 0, ''),
+(2713, 23, -1601.65, -3007.97, 24.65, 0, ''),
+(2713, 24, -1581.05, -2992.32, 30.85, 0, ''),
+(2713, 25, -1559.95, -2979.51, 34.30, 0, ''),
+(2713, 26, -1536.51, -2969.78, 32.64, 0, ''),
+(2713, 27, -1511.81, -2961.09, 29.12, 0, ''),
+(2713, 28, -1484.83, -2960.87, 32.54, 0, ''),
+(2713, 29, -1458.23, -2966.80, 40.52 , 0, ''),
+(2713, 30, -1440.20, -2971.20, 43.15, 0, ''),
+(2713, 31, -1427.85, -2989.15, 38.09, 0, ''),
+(2713, 32, -1420.27, -3008.91, 35.01, 0, ''),
+(2713, 33, -1427.58, -3032.53, 32.31, 5000, 'SAY_FINISH'),
+(2713, 34, -1427.40, -3035.17, 32.26, 0, '');
+
+DELETE FROM script_waypoint WHERE entry=4880;
+INSERT INTO script_waypoint VALUES
+(4880, 0,  -2674.53, -3440.48, 33.686,  0, ''),
+(4880, 1,  -2711.17, -3435.06, 33.1926, 0, ''),
+(4880, 2,  -2734.04, -3456.12, 33.2254, 0, ''),
+(4880, 3,  -2749.64, -3457.26, 32.8249, 0, ''),
+(4880, 4,  -2762.25, -3457.77, 30.6813, 0, ''),
+(4880, 5,  -2777.0,  -3456.12, 30.2484, 0, ''),
+(4880, 6,  -2805.49, -3450.27, 29.0624, 0, ''),
+(4880, 7,  -2809.77, -3447.14, 30.0948, 0, ''),
+(4880, 8,  -2824,    -3440.62, 33.405,  0, ''),
+(4880, 9,  -2840.2,  -3439.02, 34.1008, 0, ''),
+(4880, 10, -2878.49, -3482.81, 34.362,  0, ''),
+(4880, 11, -2878.35, -3511.51, 34.4826, 0, 'SAY_STINKY_FIRST_STOP'),
+(4880, 12, -2873.99, -3514.84, 34.5298, 0, ''),
+(4880, 13, -2866.71, -3519.06, 36.3674, 0, ''),
+(4880, 14, -2850.75, -3539.38, 36.4573, 0, ''),
+(4880, 15, -2844.49, -3557.7,  35.5588, 0, ''),
+(4880, 16, -2841.36, -3574.59, 35.5056, 0, ''),
+(4880, 17, -2841.13, -3596.95, 36.7699, 30000, 'SAY_STINKY_2_MONSTERS'),
+(4880, 18, -2828.83, -3597.3,  31.2891, 0, ''),
+(4880, 19, -2822.13, -3596.33, 31.2684, 5000, 'SAY_STINKY_GATHERING'),
+(4880, 20, -2829.08, -3597.82, 31.307,  0, ''),
+(4880, 21, -2859.28, -3602.33, 42.298,  0, ''),
+(4880, 22, -2881.64, -3601.28, 42.2111, 0, ''),
+(4880, 23, -2904.04, -3601.35, 34.969,  0, ''),
+(4880, 24, -2907.6,  -3612.73, 34.2434, 10000, 'SAY_STINKY_END');
 
 -- EOF
