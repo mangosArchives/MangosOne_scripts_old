@@ -156,6 +156,7 @@ INSERT INTO world_template VALUES
 
 /* ARATHI HIGHLANDS */
 UPDATE creature_template SET ScriptName='npc_professor_phizzlethorpe' WHERE entry=2768;
+UPDATE creature_template SET ScriptName='npc_kinelory' WHERE entry=2713;
 
 /* ASHENVALE */
 UPDATE creature_template SET ScriptName='npc_muglash' WHERE entry=12717;
@@ -394,6 +395,7 @@ UPDATE creature_template SET ScriptName='npc_prospector_remtravel' WHERE entry=2
 UPDATE creature_template SET ScriptName='npc_threshwackonator' WHERE entry=6669;
 UPDATE creature_template SET ScriptName='npc_volcor' WHERE entry=3692;
 UPDATE creature_template SET ScriptName='npc_therylune' WHERE entry=3584;
+UPDATE creature_template SET ScriptName='npc_rabid_bear' WHERE entry=2164;
 
 /* DARNASSUS */
 
@@ -425,6 +427,7 @@ UPDATE creature_template SET ScriptName='npc_ogron' WHERE entry=4983;
 UPDATE creature_template SET ScriptName='npc_morokk' WHERE entry=4500;
 UPDATE creature_template SET ScriptName='npc_restless_apparition' WHERE entry=23861;
 UPDATE creature_template SET ScriptName='npc_private_hendel' WHERE entry=4966;
+UPDATE creature_template SET ScriptName='npc_stinky_ignatz' WHERE entry=4880;
 DELETE FROM scripted_areatrigger WHERE entry=4752;
 INSERT INTO scripted_areatrigger VALUES
 (4752,'at_nats_landing');
@@ -460,6 +463,7 @@ UPDATE creature_template SET ScriptName='npc_ranger_lilatha' WHERE entry=16295;
 UPDATE creature_template SET ScriptName='boss_thermaplugg' WHERE entry=7800;
 UPDATE gameobject_template SET ScriptName='go_gnomeface_button' WHERE entry BETWEEN 142214 AND 142219;
 UPDATE creature_template SET ScriptName='npc_blastmaster_emi_shortfuse' WHERE entry=7998;
+UPDATE creature_template SET ScriptName='npc_kernobee' WHERE entry=7850;
 UPDATE instance_template SET ScriptName='instance_gnomeregan' WHERE map=90;
 
 /* GRUUL'S LAIR */
@@ -554,12 +558,26 @@ UPDATE creature_template SET ScriptName='boss_bigbadwolf' WHERE entry=17521;
 UPDATE creature_template SET ScriptName='mob_demon_chain' WHERE entry=17248;
 UPDATE creature_template SET ScriptName='npc_fiendish_portal' WHERE entry=17265;
 UPDATE creature_template SET ScriptName='npc_shade_of_aran_blizzard' WHERE entry=17161;
+UPDATE creature_template SET ScriptName='npc_netherspite_portal' WHERE entry IN (17367,17368,17369);
 UPDATE creature_template SET ScriptName='npc_infernal_target' WHERE entry=17644;
 UPDATE creature_template SET ScriptName='npc_berthold' WHERE entry=16153;
 UPDATE creature_template SET ScriptName='npc_barnes' WHERE entry=16812;
 UPDATE creature_template SET ScriptName='npc_grandmother' WHERE entry=17603;
 UPDATE creature_template SET ScriptName='npc_image_of_medivh' WHERE entry=17651;
 UPDATE creature_template SET ScriptName='npc_image_arcanagos' WHERE entry=17652;
+UPDATE creature_template SET ScriptName='npc_echo_of_medivh' WHERE entry=16816;
+UPDATE creature_template SET ScriptName='npc_king_llane' WHERE entry=21684;
+UPDATE creature_template SET ScriptName='npc_warchief_blackhand' WHERE entry=21752;
+UPDATE creature_template SET ScriptName='npc_human_conjurer' WHERE entry=21683;
+UPDATE creature_template SET ScriptName='npc_orc_warlock' WHERE entry=21750;
+UPDATE creature_template SET ScriptName='npc_human_footman' WHERE entry=17211;
+UPDATE creature_template SET ScriptName='npc_orc_grunt' WHERE entry=17469;
+UPDATE creature_template SET ScriptName='npc_water_elemental' WHERE entry=21160;
+UPDATE creature_template SET ScriptName='npc_summoned_daemon' WHERE entry=21726;
+UPDATE creature_template SET ScriptName='npc_human_charger' WHERE entry=21664;
+UPDATE creature_template SET ScriptName='npc_orc_wolf' WHERE entry=21748;
+UPDATE creature_template SET ScriptName='npc_human_cleric' WHERE entry=21682;
+UPDATE creature_template SET ScriptName='npc_orc_necrolyte' WHERE entry=21747;
 DELETE FROM scripted_event_id WHERE id IN (10591,10951);
 INSERT INTO scripted_event_id VALUES
 (10591,'event_spell_summon_nightbane'),
@@ -966,6 +984,7 @@ UPDATE creature_template SET ScriptName='npc_disciple_of_naralex' WHERE entry=36
 
 /* WESTERN PLAGUELANDS */
 UPDATE creature_template SET ScriptName='npc_the_scourge_cauldron' WHERE entry=11152;
+UPDATE creature_template SET ScriptName='npc_anchorite_truuen' WHERE entry=17238;
 
 /* WESTFALL */
 UPDATE creature_template SET ScriptName='npc_daphne_stilwell' WHERE entry=6182;
