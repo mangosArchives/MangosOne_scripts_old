@@ -78,6 +78,7 @@ UPDATE gameobject_template SET ScriptName='go_ethereum_prison' WHERE entry BETWE
 UPDATE gameobject_template SET ScriptName='go_ethereum_stasis' WHERE entry BETWEEN 185465 AND 185467;
 UPDATE gameobject_template SET ScriptName='go_ethereum_stasis' WHERE entry=184595;
 UPDATE gameobject_template SET ScriptName='go_ethereum_stasis' WHERE entry BETWEEN 185461 AND 185464;
+UPDATE gameobject_template SET ScriptName='go_gilded_brazier' WHERE entry = 181956;
 UPDATE gameobject_template SET ScriptName='go_jump_a_tron' WHERE entry=183146;
 UPDATE gameobject_template SET ScriptName='go_andorhal_tower' WHERE entry IN (176094,176095,176096,176097);
 UPDATE gameobject_template SET ScriptName='go_veil_skith_cage' WHERE entry IN (185202,185203,185204,185205);

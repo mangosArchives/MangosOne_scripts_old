@@ -1092,6 +1092,10 @@ INSERT INTO script_texts (entry,content_default,sound,type,language,emote,commen
 (-1129011,'One more minute! Hold on now, the ritual is about to take hold!',0,1,0,0,'belnistrasz SAY_1_MIN'),
 (-1129012,'That\'s it -- we made it! The ritual is set in motion, and idol fires are about to go out for good! You truly are the heroes I thought you would be!',0,1,0,4,'belnistrasz SAY_FINISH');
 
+-- -1 177 161 SANGRIAS STILLBALDE
+INSERT INTO `script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES
+(-1177161, 'Defend yourself, youngling! We\'ll see if there\'s a Blood Knight in you yet.', 0, 1, 0, 0, 'Sangrias Stillblade SAY_AGGRO');
+
 -- -1 189 000 SCARLET MONASTERY
 INSERT INTO script_texts (entry,content_default,sound,type,language,emote,comment) VALUES
 (-1189000,'Ah, I have been waiting for a real challenge!',5830,1,0,0,'herod SAY_AGGRO'),
